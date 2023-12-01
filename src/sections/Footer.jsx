@@ -1,8 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import styles from './Footer.module.scss';
-import btnStyles from '../common/styles/_buttons.scss';
-import fontStyles from '../common/styles/_typography.scss';
 
 const Footer = () => {
 	return (
@@ -25,7 +23,7 @@ const Footer = () => {
 				<p className={styles.footer__text}>
 					© 2023 - Developed by
 					<a rel="noreferrer" href="https://github.com/Hoorasadat" target="_blank">
-						Hoora Mirsanei
+						&nbsp;Hoora Mirsanei
 					</a>
 				</p>
 
