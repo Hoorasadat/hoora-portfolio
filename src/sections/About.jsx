@@ -8,7 +8,7 @@ import resumePdf from '../assets/resume.pdf';
 
 const About = () => {
 	return (
-		<section className={styles.about}>
+		<section id="about" className={styles.about}>
 			<div className="container">
 				<h2 className={classNames(styles.loadHidden, 'sectionTitle')}>About me</h2>
 				<div className={classNames(styles.aboutWrapper, 'row')}>
