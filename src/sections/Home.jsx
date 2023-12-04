@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import styles from './Home.module.scss';
 import btnStyles from '../common/styles/_buttons.scss';
 import fontStyles from '../common/styles/_typography.scss';
+import aboutSection from './About.jsx';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 	return (

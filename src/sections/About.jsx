@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './About.module.scss';
 // import btnStyles from '../common/styles/_buttons.scss';
-// import fontStyles from '../common/styles/_typography.scss';
+import '../common/styles/_sections.scss';
 import profileImage from '../assets/profile.jpg';
 import resumePdf from '../assets/resume.pdf';
 
