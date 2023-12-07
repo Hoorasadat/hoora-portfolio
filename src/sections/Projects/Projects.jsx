@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import CardList from './CardList';
-import Scroll from './Scroll';
 import classNames from 'classnames';
 import styles from './Projects.module.scss';
 
@@ -28,9 +27,7 @@ function App() {
             <div className="container">
                 <div className={styles.projectWrapper}>
                     <h2 className="sectionTitle">Portfolio</h2>
-                    <Scroll>
-                        <CardList categories={categories}/>
-                    </Scroll>
+                    <CardList categories={categories}/>
                 </div>
             </div>
         </section>
