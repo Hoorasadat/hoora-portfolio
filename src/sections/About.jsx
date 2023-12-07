@@ -26,21 +26,28 @@ const About = () => {
 					<div className="col-md-6 col-sm-12">
 						<div className={classNames(styles.aboutWrapper__info, styles.loadHidden)}>
 							<p className={classNames(styles.aboutWrapper__info__text)}>
-								I am a confident and highly organized programmer with a continuous developing
-								skills in web/ mobile applications and software development.
+								Hello! I'm a highly organized programmer passionate about crafting efficient web solutions. With a background in Object-Oriented and Full-Stack Software Development, I specialize in agile Scrum methodology. I aim to contribute my skills to a leading IT company, engaging in cutting-edge projects and making a lasting impact.
+								<br/>
+								Beyond coding, I'm an avid traveler with a keen curiosity for diverse cultures.
+								<br/>
+								Join me on this journey of continuous learning and innovation!
 							</p>
-							<p className={classNames(styles.aboutWrapper__info__text)}>
-								I like to experience new places and meet different nations! That's why I love travelling.
-								My goal is working in a big famous IT company.
-							</p>
-							<span className="d-flex mt-3">
+							<span className="d-flex flex-row mt-3">
 								<a
 									rel="noreferrer"
 									target="_blank"
 									className="ctaBtn ctaBtnResume"
 									href={resumePdf}
 								>
-									View Resume
+									PDF Resume
+								</a>
+								<a
+									rel="noreferrer"
+									target="_blank"
+									className="ctaBtn ctaBtnResume"
+									href="https://hoorasadat.github.io/React-Resume/"
+								>
+									Live Resume
 								</a>
 							</span>
 						</div>
