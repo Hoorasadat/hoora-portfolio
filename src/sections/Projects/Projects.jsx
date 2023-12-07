@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import CardList from './CardList';
 import Scroll from './Scroll';
+import classNames from 'classnames';
+import styles from './Projects.module.scss';
 
 function App() {
     const categories = [
@@ -22,13 +24,18 @@ function App() {
     ];
 
     return(
-        <div className = "text-center">
-            <h1 className='f2'>Portfolio</h1>
-            <Scroll>
-                <CardList categories={categories}/>
-            </Scroll>
-        </div>
+        <section className = {classNames("text-center", styles.projects)}>
+            <div className="container">
+                <div className={styles.projectWrapper}>
+                    <h2 className="sectionTitle">Portfolio</h2>
+                    <Scroll>
+                        <CardList categories={categories}/>
+                    </Scroll>
+                </div>
+            </div>
+        </section>
     );
 }
 
 export default App;
+
