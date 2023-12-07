@@ -10,7 +10,7 @@ const Card = (props) => {
             <span className={styles.projectWrapper__text_title}>{`${title} Projects`}</span>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-7">
+                    <div className="col-md-12">
                         <img
                             src={photo}
                             alt="Unknown"

@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import classNames from 'classnames';
 import styles from './Hero.module.scss';
+import heroImage from '../../assets/heroImage.jpeg'
 
 const Hero = () => {
 	return (
-		<section className={classNames(styles.hero, 'jumbotron')}>
+		<section className={classNames(styles.hero, "jumbotron", "d-flex")}>
 			<div className="container">
 				<p className={classNames(styles.heroTitle, styles.loadHidden, "textColorMain")}>
 					Hoora Mirsanei
@@ -21,6 +22,11 @@ const Hero = () => {
 					</Link>
 				</p>
 			</div>
+			<img
+				className="rounded-circle"
+				src={heroImage}
+				alt="Unknown"
+			/>
 		</section>
 	);
 };

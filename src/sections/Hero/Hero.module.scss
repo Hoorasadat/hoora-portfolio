@@ -7,9 +7,9 @@
   display: flex;
   align-items: center;
   border-bottom: 0px;
-  background: variables.$white-color;
+  background: variables.$black-color;
   font-weight: 400;
-  color: variables.$dark-blue-text;
+  color: variables.$dark-purple-text;
   padding: 0rem 5.6rem;
   margin-bottom: 0;
   top: 0;
@@ -22,7 +22,7 @@
   // position: sticky;
 
 
-  background-color: black;
+
 
   @include mixins.respond(phone) {
     padding: 0rem variables.$default-font-size;
