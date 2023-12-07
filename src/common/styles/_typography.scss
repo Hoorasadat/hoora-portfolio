@@ -9,7 +9,7 @@ h1 {
 p,
 a {
   font-family: "Montserrat", sans-serif;
-  font-size: variables.$default-font-size;
+  font-size: variables.$small-font-size;
 }
 
 a,
@@ -36,8 +36,8 @@ a:hover {
   }
 }
 
-.darkBlueText {
-  color: variables.$dark-blue-text !important;
+.darkPurpleText {
+  color: variables.$dark-purple-text !important;
 }
 
 .textColorMain {

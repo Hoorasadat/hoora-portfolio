@@ -3,14 +3,15 @@
 
 .hero {
   min-height: 100vh;
-  height: 100vh;
+  max-height: 100%;
+  width: auto;
   display: flex;
   align-items: center;
   border-bottom: 0px;
   background: variables.$black-color;
   font-weight: 400;
   color: variables.$dark-purple-text;
-  padding: 0rem 5.6rem;
+  padding: 1rem 5.6rem;
   margin-bottom: 0;
   top: 0;
   left: 0;
@@ -25,7 +26,7 @@
 
 
   @include mixins.respond(phone) {
-    padding: 0rem variables.$default-font-size;
+    padding: 0rem variables.$small-font-size;
   }
 
   .loadHidden {

@@ -10,12 +10,6 @@ const Footer = () => {
 					<i className="fa fa-angle-double-up fa-3x" aria-hidden="true"></i>
 				</a>
 				<div className={styles.socialLinks}>
-					<a rel="noreferrer" href="https://www.linkedin.com/in/hoorasadat-mirsanei/" target="_blank">
-						<i className="fa fa-linkedin fa-inverse"></i>
-					</a>
-					<a rel="noreferrer" href="https://github.com/Hoorasadat" target="_blank">
-						<i className="fa fa-github fa-inverse"></i>
-					</a>
 				</div>
 
 				<hr />

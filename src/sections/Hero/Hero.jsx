@@ -23,7 +23,7 @@ const Hero = () => {
 				</p>
 			</div>
 			<img
-				className="rounded-circle"
+				className="col-md-6 col-sm-12 rounded-circle img-fluid"
 				src={heroImage}
 				alt="Unknown"
 			/>

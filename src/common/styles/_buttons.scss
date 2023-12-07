@@ -6,7 +6,7 @@
   display: inline-block;
   position: relative;
   margin-right: 0.5rem;
-  padding: 0.8rem variables.$default-font-size;
+  padding: 0.8rem variables.$button-font-size;
   border-radius: 50px;
   font-weight: bold;
   line-height: 1;
@@ -57,6 +57,7 @@
       variables.$primary-color 0%,
       variables.$secondary-color 100%
     );
+    border-radius: 0px;
 
     @include mixins.respond(phone) {
       background-image: none;
