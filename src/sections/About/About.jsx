@@ -11,36 +11,36 @@ const About = () => {
 		<section id="about" className={styles.about}>
 			<div className="container">
 				<h2 className={classNames(styles.loadHidden, "sectionTitle")}>About me</h2>
-				<div className={classNames(styles.aboutWrapper, "row")}>
-					<div className="col-md-4 col-sm-12 pr-5">
-						<div className={classNames(styles.aboutWrapper__image, styles.loadHidden)}>
+				<div className="row flex-md-row flex-column">
+					<div className="col-md-4">
+						<div className={classNames(styles.image, styles.loadHidden)}>
 							<img
 								alt="Profile"
-								className="img-fluid rounded shadow-lg"
+								className="img-fluid"
 								height="auto"
 								width="300px"
 								src={profileImage}
 							/>
 						</div>
-						<div className={classNames(styles.socialLinks, "row d-flex flex-row justify-content-center")}>
+						<div className={classNames(styles.socialLinks, "d-flex flex-row justify-content-center")}>
 							<a rel="noreferrer" href="https://www.linkedin.com/in/hoorasadat-mirsanei/" target="_blank">
-								<i className="fa fa-linkedin fa-inverse"></i>
+								<i className="fa fa-linkedin"></i>
 							</a>
 							<a rel="noreferrer" href="https://github.com/Hoorasadat" target="_blank">
-								<i className="fa fa-github fa-inverse"></i>
+								<i className={classNames(styles.git, "fa fa-github")}></i>
 							</a>
 						</div>
 					</div>
-					<div className="col-md-8 col-sm-12 pl-5">
-						<div className={classNames(styles.aboutWrapper__info, styles.loadHidden)}>
-							<p className={styles.aboutWrapper__info__text}>
+					<div className="col-md-8 col-sm-12">
+						<div className={classNames(styles.info, styles.loadHidden)}>
+							<p className={styles.info__text}>
 								Hello! I'm a highly organized programmer passionate about crafting efficient web solutions with a background in
-								<span className={classNames(styles.aboutWrapper__info__text__important)}>
-									Object-Oriented
+								<span className={classNames(styles.info__text__important)}>
+									&nbsp;Object-Oriented&nbsp;
 								</span>
 								and
-								<span className={styles.aboutWrapper__info__text__important}>
-									Full-Stack
+								<span className={styles.info__text__important}>
+									&nbsp;Full-Stack&nbsp;
 								</span>
 								 Software Development and speciality in agile methodology. I aim to contribute my skills to a leading IT company, engaging in cutting-edge projects and making a lasting impact.
 								<br/>
@@ -53,7 +53,7 @@ const About = () => {
 								<a
 									rel="noreferrer"
 									target="_blank"
-									className="ctaBtn ctaBtnResume mr-3"
+									className="ctaBtn ctaBtnResume m-3"
 									href={resumePdf}
 								>
 									PDF Resume
@@ -61,7 +61,7 @@ const About = () => {
 								<a
 									rel="noreferrer"
 									target="_blank"
-									className="ctaBtn ctaBtnResume ml-3"
+									className="ctaBtn ctaBtnResume m-3"
 									href="https://hoorasadat.github.io/React-Resume/"
 								>
 									Live Resume

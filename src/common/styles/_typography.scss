@@ -25,15 +25,20 @@ a:hover {
 }
 
 .sectionTitle {
-  margin: 0px;
-  margin-bottom: 4.5rem;
+  margin-bottom: 6rem;
   font-size: variables.$big-font-size;
   font-weight: bold;
   text-transform: uppercase;
 
-  @include mixins.respond(phone) {
-    font-size: 2.8rem;
+  @include mixins.respond(tab-land) {
+    margin-bottom: 2.5rem;
   }
+
+  @include mixins.respond(tab-port) {
+    font-size: variables.$med-font-size;
+    margin-bottom: 1rem;
+  }
+
 }
 
 .darkPurpleText {
