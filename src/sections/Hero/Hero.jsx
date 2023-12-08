@@ -6,8 +6,8 @@ import heroImage from '../../assets/heroImage.jpeg'
 
 const Hero = () => {
 	return (
-		<section className={classNames(styles.hero, "jumbotron", "d-flex")}>
-			<div className="container">
+		<section className={classNames(styles.hero, "jumbotron", "d-flex", "col-md")}>
+			<div className="col-md-6">
 				<p className={classNames(styles.heroTitle, styles.loadHidden, "textColorMain")}>
 					Hoora Mirsanei
 				</p>
@@ -22,11 +22,14 @@ const Hero = () => {
 					</Link>
 				</p>
 			</div>
-			<img
-				className="col-md-6 col-sm-12 rounded-circle img-fluid"
-				src={heroImage}
-				alt="Unknown"
-			/>
+
+			<div className="col-md-6">
+				<img
+					className="rounded-circle img-fluid"
+					src={heroImage}
+					alt="Unknown"
+				/>
+			</div>
 		</section>
 	);
 };
