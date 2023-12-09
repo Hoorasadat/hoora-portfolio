@@ -8,55 +8,44 @@
   color: variables.$dark-purple-text;
   padding: 5.5rem 5.5rem;
   margin-bottom: 0;
-  @include mixins.respond(phone) {
-    padding: 0rem variables.$small-font-size;
-  }
 
   .loadHidden {
     // visibility: hidden;
   }
 
   .heroTitle {
-    font-size: 5.6rem;
+    font-size: variables.$xBig-font-size;
     font-weight: 700;
     margin-bottom: 3.2rem;
     text-align: left;
 
     @include mixins.respond(tab-land) {
-      font-size: 4rem;
+      font-size: variables.$big-font-size;
     }
     @include mixins.respond(tab-port) {
-      font-size: 3.6rem;
+      font-size: variables.$xLarge-font-size;
       text-align: center;
     }
-    @include mixins.respond(phone) {
-      font-size: 3.5rem;
-      line-height: 1.5;
-    }
     @include mixins.respond(phone-xs) {
-      font-size: 2.8rem;
+      font-size: variables.$large-font-size;
     }
   }
 
   .heroPosition {
-    font-size: 2.6rem;
+    font-size: variables.$large-font-size;
     font-weight: 100;
     margin-bottom: 3.2rem;
     text-align: left;
 
     @include mixins.respond(tab-land) {
-      font-size: 4rem;
+      font-size: variables.$med-font-size;
     }
     @include mixins.respond(tab-port) {
-      font-size: 3.6rem;
+      font-size: variables.$small-font-size;
       text-align: center;
     }
-    @include mixins.respond(phone) {
-      font-size: 3.5rem;
-      line-height: 1.5;
-    }
     @include mixins.respond(phone-xs) {
-      font-size: 2.8rem;
+      font-size: variables.$xSmall-font-size;
     }
   }
 
@@ -68,14 +57,17 @@
     }
 
     & a {
-      font-size: 2.4rem;
+      font-size: variables.$large-font-size;
 
-      @include mixins.respond(phone) {
-        font-size: 2rem;
+      @include mixins.respond(tab-land) {
+        font-size: variables.$med-font-size;
       }
-
+      @include mixins.respond(tab-port) {
+        font-size: variables.$small-font-size;
+        text-align: center;
+      }
       @include mixins.respond(phone-xs) {
-        font-size: 1.3rem;
+        font-size: variables.$xSmall-font-size;
       }
     }
   }

@@ -48,12 +48,6 @@ a:hover {
 .textColorMain {
   @include mixins.supportColorForIE11();
 
-  // Responsive text purple style
-  @include mixins.respond(phone) {
-    background-image: none;
-    -webkit-text-fill-color: variables.$secondary-color;
-  }
-
   &:hover {
     transform: translateX(2px);
   }

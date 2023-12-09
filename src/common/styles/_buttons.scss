@@ -56,12 +56,6 @@
 	}
   }
 
-  @include mixins.respond(phone) {
-	background-image: none;
-	border: 2px solid variables.$secondary-color;
-	-webkit-text-fill-color: variables.$secondary-color;
-  }
-
   &::after {
 	background-image: linear-gradient(
 	  135deg,
@@ -69,19 +63,11 @@
 	  variables.$secondary-color 100%
 	);
 	border-radius: 0px;
-
-	@include mixins.respond(phone) {
-	  background-image: none;
-	}
   }
 
   &:hover {
 	-webkit-text-fill-color: variables.$white-color;
 	text-decoration: none;
-
-	@include mixins.respond(phone) {
-	  -webkit-text-fill-color: variables.$secondary-color;
-	}
 
 	&::after {
 	  width: 100%;

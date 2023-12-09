@@ -34,15 +34,15 @@ const About = () => {
 					<div className="col-md-8 col-sm-12">
 						<div className={classNames(styles.info, styles.loadHidden)}>
 							<p className={styles.info__text}>
-								Hello! I'm a highly organized programmer passionate about crafting efficient web solutions with a background in
+								Hello! I'm a highly organized programmer passionate about crafting efficient web solutions with a background in&nbsp;
 								<span className={classNames(styles.info__text__important)}>
-									&nbsp;Object-Oriented&nbsp;
+									Object-Oriented
 								</span>
-								and
+								&nbsp;and&nbsp;
 								<span className={styles.info__text__important}>
-									&nbsp;Full-Stack&nbsp;
+									Full-Stack
 								</span>
-								 Software Development and speciality in agile methodology. I aim to contribute my skills to a leading IT company, engaging in cutting-edge projects and making a lasting impact.
+								 &nbsp;Software Development and speciality in agile methodology. I aim to contribute my skills to a leading IT company, engaging in cutting-edge projects and making a lasting impact.
 								<br/>
 								Beyond coding, I'm an avid traveler with a keen curiosity for diverse cultures.
 								<br/>

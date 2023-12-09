@@ -77,7 +77,7 @@
         @include mixins.respond(tab-port) {
             font-size: variables.$xSmall-font-size;
         }
-        @include mixins.respond(phone-xs) {
+        @include mixins.respond(phone) {
             text-align: left;
         }
 
