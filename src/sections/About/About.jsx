@@ -53,7 +53,7 @@ const About = () => {
 								<a
 									rel="noreferrer"
 									target="_blank"
-									className="ctaBtn ctaBtnResume m-3"
+									className="ctaBtn ctaBtnOthers m-3"
 									href={resumePdf}
 								>
 									PDF Resume
@@ -61,7 +61,7 @@ const About = () => {
 								<a
 									rel="noreferrer"
 									target="_blank"
-									className="ctaBtn ctaBtnResume m-3"
+									className="ctaBtn ctaBtnOthers m-3"
 									href="https://hoorasadat.github.io/React-Resume/"
 								>
 									Live Resume

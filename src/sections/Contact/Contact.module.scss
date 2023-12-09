@@ -15,29 +15,10 @@
   color: variables.$white-color;
 
   @include mixins.respond(tab-land) {
-    padding: 10rem 0;
+    padding: 5rem;
     clip-path: none;
     margin-top: 0;
     -webkit-clip-path: none;
-  }
-
-  .contactWrapper {
-    margin-top: 3.2rem;
-    padding: 10 2rem;
-    backface-visibility: hidden;
-
-    &__text {
-      margin-bottom: 2.5rem;
-    }
-
-    &__text,
-    a {
-      font-size: 2.4rem;
-
-      @include mixins.respond(phone) {
-        font-size: 2rem;
-      }
-    }
   }
 
   .loadHidden {
