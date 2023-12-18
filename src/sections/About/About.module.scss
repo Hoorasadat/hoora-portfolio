@@ -38,12 +38,14 @@
 
 .socialLinks {
     a {
-        font-size: variables.$big-font-size;
+        font-size: variables.$xLarge-font-size;
         width: 5rem;
         transition: all 0.2s ease-in;
+        color: variables.$white-color;
+
 
         @include mixins.respond(tab-port) {
-            font-size: variables.$large-font-size;
+            font-size: variables.$med-font-size;
             width: 3rem;
             margin: 0.3rem;
         }
@@ -52,11 +54,6 @@
             transform: translateY(-2px);
         }
     }
-}
-
-.git {
-    color: variables.$black-color;
-    background-Color: 'transparent'
 }
 
 .info {

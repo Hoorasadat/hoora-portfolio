@@ -4,7 +4,7 @@
 .footer {
   background-color: variables.$light-purple;
   color: variables.$white-color;
-  padding: 2rem 0;
+  padding: 1rem 0;
 
   @include mixins.respond(phone) {
     border: 0px;
@@ -42,8 +42,20 @@
 
 .backToTop i {
   color: variables.$white-color;
-  margin: 1rem 0 variables.$small-font-size;
+  margin: 1rem 0;
+  font-size: variables.$big-font-size;
+
   transition: all 0.2s ease-in;
+
+  @include mixins.respond(tab-land) {
+    font-size: variables.$xLarge-font-size;
+  }
+  @include mixins.respond(tab-port) {
+      font-size: variables.$large-font-size;
+  }
+  @include mixins.respond(phone) {
+    font-size: variables.$med-font-size;
+  }
 
   &:hover {
     transform: translateY(-2px);

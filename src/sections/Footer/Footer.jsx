@@ -15,8 +15,8 @@ const Footer = () => {
 				<hr />
 
 				<p className={styles.footer__text}>
-					© 2023 - Developed by
-					<a rel="noreferrer" href="https://github.com/Hoorasadat" target="_blank">
+					Copyright © 2023 All rights reserved
+					<a rel="noreferrer" href="#" target="_blank">
 						&nbsp;Hoora Mirsanei
 					</a>
 				</p>

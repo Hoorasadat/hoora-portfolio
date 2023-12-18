@@ -27,7 +27,7 @@ const About = () => {
 								<i className="fa fa-linkedin"></i>
 							</a>
 							<a rel="noreferrer" href="https://github.com/Hoorasadat" target="_blank">
-								<i className={classNames(styles.git, "fa fa-github")}></i>
+								<i className="fa fa-github"></i>
 							</a>
 						</div>
 					</div>
