@@ -12,11 +12,11 @@
 
   &__text {
     color: darken(variables.$white-color, 100%);
-    font-size: 1.3rem;
+    font-size: variables.$xSmall-font-size;
 
     a {
       color: darken(variables.$white-color, 100%);
-      font-size: 1.3rem;
+      font-size: variables.$xSmall-font-size;
       transition: all 0.4s;
       display: inline-block;
       background-color: variables.$light-purple;
