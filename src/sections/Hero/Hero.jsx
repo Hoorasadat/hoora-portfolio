@@ -6,7 +6,7 @@ import heroImage from '../../assets/heroImage.jpeg';
 
 const Hero = () => {
 	return (
-		<section className={classNames(styles.hero, "jumbotron", "d-flex", "flex-md-row", "flex-column-reverse")}>
+		<section id="home" className={classNames(styles.hero, "jumbotron", "d-flex", "flex-md-row", "flex-column-reverse")}>
 			<div className="col-md-6">
 				<p className={classNames(styles.heroTitle, styles.loadHidden, "textColorMain")}>
 					Hoora Mirsanei

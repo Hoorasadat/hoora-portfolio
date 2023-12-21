@@ -5,7 +5,7 @@ import fontStyles from '../../common/styles/_typography.scss';
 
 const Contact = () => {
 	return (
-		<section className={styles.contact}>
+		<section id="contact" className={styles.contact}>
 			<div className="container">
 				<h2 className="sectionTitle">Contact me!</h2>
 				<div className={styles.loadHidden}>

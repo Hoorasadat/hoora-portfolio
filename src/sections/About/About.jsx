@@ -31,7 +31,7 @@ const About = () => {
 							</a>
 						</div>
 					</div>
-					<div className="col-md-8 col-sm-12">
+					<div id="resume" className="col-md-8 col-sm-12">
 						<div className={classNames(styles.info, styles.loadHidden)}>
 							<p className={styles.info__text}>
 								Hello! I'm a highly organized programmer passionate about crafting efficient web solutions with a background in&nbsp;
