@@ -37,7 +37,7 @@ const NavHeader = () => {
 		<nav className={classNames(styles.nav, "navbar fixed-top navbar-expand-lg", isScrolled && styles.scrolled)}>
 			<div className="container">
 				<button
-					className="navbar-toggler"
+					className={classNames(styles.btn, "navbar-toggler")}
 					type="button"
 					data-toggle="collapse"
 					data-target="#navbarNav"
