@@ -2,12 +2,11 @@
 @use '../../common/styles/mixins' as mixins;
 
 .hero {
-  max-height: 100%;
   align-items: center;
   background: variables.$black-color;
   color: variables.$dark-purple-text;
   padding: 5.5rem 5.5rem;
-  margin-top: 4rem;
+  margin-top: 10.5rem;
   margin-bottom: 0;
 
   .loadHidden {
