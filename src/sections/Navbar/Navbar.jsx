@@ -52,7 +52,7 @@ const NavHeader = () => {
 					<li className="nav-item">
 						<Link
 							id="len1"
-							className={classNames(styles.navlink, "navbar-brand", { bounce: bounceAnimation })}
+							className={classNames(styles.navlink, isScrolled && styles.scrolled, { bounce: bounceAnimation }, "nav-link")}
 							rel="noreferrer"
 							to="home"
 							smooth={true}

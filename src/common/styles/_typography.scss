@@ -39,10 +39,6 @@ a:hover {
   }
 }
 
-.darkPurpleText {
-  color: variables.$dark-purple-text !important;
-}
-
 .textColorMain {
   @include mixins.supportColorForIE11();
 

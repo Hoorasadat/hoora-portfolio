@@ -13,23 +13,19 @@
 
 .navlink {
     color: variables.$light-purple !important;
-    margin: 1rem 2rem;
+    margin: 1rem;
     cursor: pointer;
     transition-duration: .3s;
     transition-property:transform;
 
-    @include mixins.respond(tab-med) {
-        background-color: variables.$white-color !important;
+    @include mixins.respond(tab-land) {
+        // font-size: variables.$small-font-size !important;
     }
-}
 
-.navText {
-    margin-top: 2rem;
-}
-
-.scrolled {
-    background-color: variables.$white-color !important;
-    color: variables.$black-color !important;;
+    @include mixins.respond(tab-med) {
+        color: variables.$dark-purple-text !important;
+        margin: 0;
+    }
 }
 
 .navlink:before{
@@ -47,6 +43,25 @@
     /* W3C */
     transition-duration: 0.3s;
     transition-property: transform, opacity;
+
+    @include mixins.respond(tab-med) {
+        background: -webkit-radial-gradient(center, ellipse, rgba(113, 17, 155, 1) 0%, rgba(113, 17, 155, 0) 80%);
+        background: radial-gradient(ellipse at center, rgba(113, 17, 155, 1) 0%, rgba(113, 17, 155, 0) 80%);
+    }
+}
+
+.navText {
+    margin-top: 2.7rem;
+}
+
+.scrolled {
+    background-color: variables.$white-color !important;
+    color: variables.$dark-purple-text !important;
+}
+
+.scrolled:before{
+    background: -webkit-radial-gradient(center, ellipse, rgba(113, 17, 155, 1) 0%, rgba(113, 17, 155, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(113, 17, 155, 1) 0%, rgba(113, 17, 155, 0) 80%);
 }
 
 .navlink:hover, .navlink:active, .navlink:focus{
@@ -98,5 +113,4 @@
     width: 110px;
     height: auto;
     margin-top: 0 !important;
-
 }
