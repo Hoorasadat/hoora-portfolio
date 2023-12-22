@@ -11,7 +11,7 @@ const NavHeader = () => {
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollPosition = window.scrollY;
-			setIsScrolled(scrollPosition > 500);
+			setIsScrolled(scrollPosition > 100);
 		};
 
 		// Add scroll event listener
@@ -35,17 +35,19 @@ const NavHeader = () => {
 
 	return (
 		<nav className={classNames(styles.nav, "navbar fixed-top navbar-expand-lg", isScrolled && styles.scrolled)}>
-			<button
-				className="navbar-toggler"
-				type="button"
-				data-toggle="collapse"
-				data-target="#navbarNav"
-				aria-controls="navbarNav"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-				>
-				<span className="nav navbar-toggler-icon"></span>
-			</button>
+			<div className="container">
+				<button
+					className="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+					>
+					<span className="nav navbar-toggler-icon"></span>
+				</button>
+			</div>
 			<div className="collapse navbar-collapse" id="navbarNav">
 				<ul className="navbar-nav ml-auto">
 
