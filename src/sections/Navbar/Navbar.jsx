@@ -70,6 +70,7 @@ const NavHeader = () => {
 							to="home"
 							smooth={true}
 							duration={500}
+							offset={-100}
 							onClick={handleNavItemClick}
 						>
 							<img className={styles.logo} src={logo} alt="HOME" />
@@ -84,6 +85,7 @@ const NavHeader = () => {
 							to="about"
 							smooth={true}
 							duration={500}
+							offset={-50}
 							onClick={handleNavItemClick}
 						>
 							ABOUT
@@ -98,6 +100,7 @@ const NavHeader = () => {
 							to="resume"
 							smooth={true}
 							duration={500}
+							offset={-120}
 							onClick={handleNavItemClick}
 						>
 							RESUME
@@ -112,6 +115,7 @@ const NavHeader = () => {
 							to="projects"
 							smooth={true}
 							duration={500}
+							offset={-50}
 							onClick={handleNavItemClick}
 						>
 							PORTFOLIO

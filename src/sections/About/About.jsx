@@ -31,7 +31,7 @@ const About = () => {
 							</a>
 						</div>
 					</div>
-					<div id="resume" className="col-md-8 col-sm-12">
+					<div className="col-md-8 col-sm-12">
 						<div className={classNames(styles.info, styles.loadHidden)}>
 							<p className={styles.info__text}>
 								Hello! I'm a highly organized programmer passionate about crafting efficient web solutions with a background in&nbsp;
@@ -49,7 +49,7 @@ const About = () => {
 								Join me on this journey of continuous learning and innovation!
 							</p>
 						</div>
-						<div className="row d-flex flex-row justify-content-center">
+						<div  id="resume" className="row d-flex flex-row justify-content-center">
 								<a
 									rel="noreferrer"
 									target="_blank"

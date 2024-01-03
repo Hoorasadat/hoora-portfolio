@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import classNames from 'classnames';
 import styles from './Footer.module.scss';
 
@@ -6,9 +7,16 @@ const Footer = () => {
 	return (
 		<footer className={classNames(styles.footer, 'navbar-static-bottom')}>
 			<div className="container">
-				<a rel="noreferrer" href="#top" className={styles.backToTop}>
+				<Link
+					className={styles.backToTop}
+					rel="noreferrer"
+					to="home"
+					smooth={true}
+					duration={500}
+					offset={-100}
+				>
 					<i className="fa fa-angle-double-up fa-3x" aria-hidden="true"></i>
-				</a>
+				</Link>
 				<div className={styles.socialLinks}>
 				</div>
 
