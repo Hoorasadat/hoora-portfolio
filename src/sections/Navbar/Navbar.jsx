@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
+import { Navbar as BootstrapNavbar, Button } from 'react-bootstrap';
 import classNames from 'classnames';
 import logo from '../../assets/logo.png';
 import styles from './Navbar.module.scss';
 
 const NavHeader = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
-  	const [bounceAnimation, setBounceAnimation] = useState(false);
+	const [bounceAnimation, setBounceAnimation] = useState(false);
+	const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollPosition = window.scrollY;
-			setIsScrolled(scrollPosition > 100);
+			setIsScrolled(scrollPosition > 120);
 		};
 
 		// Add scroll event listener
@@ -23,7 +25,7 @@ const NavHeader = () => {
 		};
 	}, []);
 
-  	useEffect(() => {
+	useEffect(() => {
 		// Start the bounce animation after component mount
 		const intervalId = setInterval(() => {
 		setBounceAnimation((prev) => !prev);
@@ -33,24 +35,33 @@ const NavHeader = () => {
 		return () => clearInterval(intervalId);
 	}, []);
 
-	return (
-		<nav className={classNames(styles.nav, "navbar fixed-top navbar-expand-lg", isScrolled && styles.scrolled)}>
-			<div className="container">
-				<button
-					className={classNames(styles.btn, "navbar-toggler")}
-					type="button"
-					data-toggle="collapse"
-					data-target="#navbarNav"
-					aria-controls="navbarNav"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-					>
-					<span className="nav navbar-toggler-icon"></span>
-				</button>
-			</div>
-			<div className="collapse navbar-collapse" id="navbarNav">
-				<ul className="navbar-nav ml-auto">
+	const handleNavbarToggle = () => {
+		// Toggle the navbar show and hide when the button is clicked
+		setIsNavbarOpen(!isNavbarOpen);
+	};
 
+	const handleNavItemClick = () => {
+		// Close the navbar when a nav item is clicked
+		setIsNavbarOpen(false);
+	  };
+
+	return (
+		<BootstrapNavbar
+			className={classNames(styles.nav, isScrolled && styles.scrolled)}
+			fixed="top"
+			expand="lg"
+		>
+			<div className="container">
+				<Button
+					className={classNames(styles.btn, "navbar-toggler")}
+					variant="outline-light"
+					onClick={handleNavbarToggle}
+				>
+					<span className="nav navbar-toggler-icon"></span>
+				</Button>
+			</div>
+			<BootstrapNavbar.Collapse in={isNavbarOpen}>
+				<ul className="navbar-nav">
 					<li className="nav-item">
 						<Link
 							id="len1"
@@ -59,10 +70,12 @@ const NavHeader = () => {
 							to="home"
 							smooth={true}
 							duration={500}
+							onClick={handleNavItemClick}
 						>
 							<img className={styles.logo} src={logo} alt="HOME" />
 						</Link>
 					</li>
+
 					<li className="nav-item">
 						<Link
 							id="len2"
@@ -71,6 +84,7 @@ const NavHeader = () => {
 							to="about"
 							smooth={true}
 							duration={500}
+							onClick={handleNavItemClick}
 						>
 							ABOUT
 						</Link>
@@ -84,6 +98,7 @@ const NavHeader = () => {
 							to="resume"
 							smooth={true}
 							duration={500}
+							onClick={handleNavItemClick}
 						>
 							RESUME
 						</Link>
@@ -97,6 +112,7 @@ const NavHeader = () => {
 							to="projects"
 							smooth={true}
 							duration={500}
+							onClick={handleNavItemClick}
 						>
 							PORTFOLIO
 						</Link>
@@ -110,14 +126,15 @@ const NavHeader = () => {
 							to="contact"
 							smooth={true}
 							duration={500}
+							onClick={handleNavItemClick}
 						>
 							CONTACT
 						</Link>
 					</li>
 				</ul>
-			</div>
-		</nav>
-	);
+			</BootstrapNavbar.Collapse>
+		</BootstrapNavbar>
+  );
 };
 
 export default NavHeader;
