@@ -7,26 +7,29 @@ function App() {
     const categories = [
         {
             id: 1,
-            title: ".Net",
-            image: "./images/asp.jpeg"
+            title: "C# - .Net",
+            image: "./images/dotnet.jpeg",
+            linkTo: "dotnet"
         },
         {
             id: 2,
-            title: "React",
-            image: "./images/react.png"
+            title: "React/ Node",
+            image: "./images/react.png",
+            linkTo: "react"
         },
         {
             id: 3,
-            title: "HTML/CSS/JS",
-            image: "./images/htmlCssJs.png"
+            title: "HTML - CSS - JS",
+            image: "./images/htmlCssJs.png",
+            linkTo: "htmlcss"
         }
     ];
 
     return(
-        <section className = {classNames("text-center", styles.projects)}>
+        <section id="projects" className = {classNames(styles.projects)}>
             <div className="container">
                 <div className={styles.projectWrapper}>
-                    <h2 className="sectionTitle">Portfolio</h2>
+                    <h1 className="sectionTitle">Projects</h1>
                     <CardList categories={categories}/>
                 </div>
             </div>

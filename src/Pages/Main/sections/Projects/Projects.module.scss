@@ -1,0 +1,22 @@
+@use '../../../../common/styles/variables';
+@use '../../../../common/styles/mixins' as mixins;
+
+.projects {
+  color: variables.$dark-purple-text;
+  margin-top: -18rem;
+  padding-top: 18rem;
+
+  @include mixins.respond(tab-land) {
+    margin-top: 0;
+    padding-top: 5rem;
+  }
+}
+
+.projectWrapper {
+  margin-bottom: 15rem;
+
+  @include mixins.respond(phone) {
+    margin-bottom: 0rem;
+  }
+}
+

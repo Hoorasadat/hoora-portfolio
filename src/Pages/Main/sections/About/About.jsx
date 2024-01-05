@@ -2,9 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './About.module.scss';
 // import btnStyles from '../common/styles/_buttons.scss';
-import '../../common/styles/_sections.scss';
-import profileImage from '../../assets/profile.jpg';
-import resumePdf from '../../assets/resume.pdf';
+import '../../../../common/styles/_sections.scss';
+import profileImage from '../../../../assets/profile.jpg';
+import resumePdf from '../../../../assets/resume.pdf';
 
 const About = () => {
 	return (
@@ -23,7 +23,7 @@ const About = () => {
 							/>
 						</div>
 						<div className={classNames(styles.socialLinks, "d-flex flex-row justify-content-center")}>
-							<a rel="noreferrer" href="https://www.linkedin.com/in/hoorasadat-mirsanei/" target="_blank">
+							<a rel="noreferrer" href="https://www.linkedin.com/in/hoora-mirsanei/" target="_blank">
 								<i className="fa fa-linkedin"></i>
 							</a>
 							<a rel="noreferrer" href="https://github.com/Hoorasadat" target="_blank">
