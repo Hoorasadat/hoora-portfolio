@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Contact.module.scss';
-import btnStyles from '../../../../common/styles/_buttons.scss';
-import fontStyles from '../../../../common/styles/_typography.scss';
+import btnStyles from '../../common/styles/_buttons.scss';
+import fontStyles from '../../common/styles/_typography.scss';
 
 const Contact = () => {
 	return (

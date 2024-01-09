@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 import { Navbar as BootstrapNavbar, Button } from 'react-bootstrap';
 import classNames from 'classnames';
-import logo from '../../../../assets/logo.png';
+import logo from '../../../assets/logo.png';
 import styles from './Navbar.module.scss';
 
-const NavHeader = () => {
+const NavHeader = (props) => {
+	const {naveHomeItem, navItems} = props;
+
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [bounceAnimation, setBounceAnimation] = useState(false);
 	const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -45,6 +47,26 @@ const NavHeader = () => {
 		setIsNavbarOpen(false);
 	  };
 
+	const navArray = navItems.map(navItem => {
+		return(
+			<li className="nav-item">
+				<Link
+					key={navItem.id}
+					id={`len${navItem.id}`}
+					className={classNames(styles.navlink, styles.navText, isScrolled && styles.scrolled, "nav-link")}
+					rel="noreferrer"
+					to={navItem.to}
+					smooth={true}
+					duration={500}
+					offset={-50}
+					onClick={handleNavItemClick}
+				>
+					{navItem.title}
+				</Link>
+			</li>
+		)
+	});
+
 	return (
 		<BootstrapNavbar
 			className={classNames(styles.nav, isScrolled && styles.scrolled)}
@@ -64,10 +86,10 @@ const NavHeader = () => {
 				<ul className="navbar-nav">
 					<li className="nav-item">
 						<Link
-							id="len1"
+							id={`len${naveHomeItem.id}`}
 							className={classNames(styles.navlink, isScrolled && styles.scrolled, { bounce: bounceAnimation }, "nav-link")}
 							rel="noreferrer"
-							to="home"
+							to={naveHomeItem.to}
 							smooth={true}
 							duration={500}
 							offset={-100}
@@ -77,64 +99,7 @@ const NavHeader = () => {
 						</Link>
 					</li>
 
-					<li className="nav-item">
-						<Link
-							id="len2"
-							className={classNames(styles.navlink, styles.navText, isScrolled && styles.scrolled, "nav-link")}
-							rel="noreferrer"
-							to="about"
-							smooth={true}
-							duration={500}
-							offset={-50}
-							onClick={handleNavItemClick}
-						>
-							ABOUT
-						</Link>
-					</li>
-
-					<li className="nav-item">
-						<Link
-							id="len3"
-							className={classNames(styles.navlink, styles.navText, isScrolled && styles.scrolled, "nav-link")}
-							rel="noreferrer"
-							to="resume"
-							smooth={true}
-							duration={500}
-							offset={-120}
-							onClick={handleNavItemClick}
-						>
-							RESUME
-						</Link>
-					</li>
-
-					<li className="nav-item">
-						<Link
-							id="len4"
-							className={classNames(styles.navlink, styles.navText, isScrolled && styles.scrolled, "nav-link")}
-							rel="noreferrer"
-							to="projects"
-							smooth={true}
-							duration={500}
-							offset={-50}
-							onClick={handleNavItemClick}
-						>
-							PORTFOLIO
-						</Link>
-					</li>
-
-					<li className="nav-item">
-						<Link
-							id="len5"
-							className={classNames(styles.navlink, styles.navText, isScrolled && styles.scrolled, "nav-link")}
-							rel="noreferrer"
-							to="contact"
-							smooth={true}
-							duration={500}
-							onClick={handleNavItemClick}
-						>
-							CONTACT
-						</Link>
-					</li>
+					{navArray}
 				</ul>
 			</BootstrapNavbar.Collapse>
 		</BootstrapNavbar>

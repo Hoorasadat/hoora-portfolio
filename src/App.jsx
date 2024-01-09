@@ -1,16 +1,31 @@
 import { useEffect, useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Main from './sections/Main';
+import Layout from './pages/Layout/Layout';
+import Main from './pages/Main/Main';
+import Dotnet from './pages/Dotnet/Dotnet';
+import React from './pages/React/React';
+import HtmlCss from './pages/HtmlCss/HtmlCss';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    Component: Main,
-
+    Component: Layout,
     children: [
       {
         index: true,
         Component: Main
+      },
+      {
+        path: 'csharp-dotnet',
+        Component: Dotnet,
+      },
+      {
+        path: 'react-node',
+        Component: React,
+      },
+      {
+        path: 'html-css-js',
+        Component: HtmlCss,
       }
     ]
   }
@@ -42,8 +57,6 @@ function App() {
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
   }, []);
-
-
 
   return (
     <RouterProvider router={router} />

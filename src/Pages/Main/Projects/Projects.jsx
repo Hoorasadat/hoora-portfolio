@@ -9,19 +9,19 @@ function App() {
             id: 1,
             title: "C# - .Net",
             image: "./images/dotnet.jpeg",
-            linkTo: "dotnet"
+            linkTo: "csharp-dotnet"
         },
         {
             id: 2,
             title: "React/ Node",
             image: "./images/react.png",
-            linkTo: "react"
+            linkTo: "react-node"
         },
         {
             id: 3,
             title: "HTML - CSS - JS",
             image: "./images/htmlCssJs.png",
-            linkTo: "htmlcss"
+            linkTo: "html-css-js"
         }
     ];
 
