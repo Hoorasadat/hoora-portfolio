@@ -1,4 +1,4 @@
-import NavHeader from '../../components/Header/Navbar/Navbar';
+import Navbar from '../../components/Header/Navbar/Navbar';
 
 const HtmlCss = () => {
   const naveHomeItem =
@@ -21,7 +21,12 @@ const HtmlCss = () => {
   ]
   return (
     <div>
-      <NavHeader naveHomeItem={naveHomeItem} navItems={navItems}></NavHeader>
+      <Navbar
+        naveHomeItem={naveHomeItem}
+        navItems={navItems}
+        type="route"
+      >
+      </Navbar>
     </div>
   );
 }

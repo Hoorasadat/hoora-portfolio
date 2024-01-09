@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link as RoutLink } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import { Navbar as BootstrapNavbar, Button } from 'react-bootstrap';
 import classNames from 'classnames';
 import logo from '../../../assets/logo.png';
 import styles from './Navbar.module.scss';
 
 const NavHeader = (props) => {
-	const {naveHomeItem, navItems} = props;
+	const {naveHomeItem, navItems, type} = props;
+
+	const LinkComponent = type==="scroll" ? ScrollLink : RoutLink;
 
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [bounceAnimation, setBounceAnimation] = useState(false);
@@ -50,7 +53,7 @@ const NavHeader = (props) => {
 	const navArray = navItems.map(navItem => {
 		return(
 			<li className="nav-item">
-				<Link
+				<LinkComponent
 					key={navItem.id}
 					id={`len${navItem.id}`}
 					className={classNames(styles.navlink, styles.navText, isScrolled && styles.scrolled, "nav-link")}
@@ -62,7 +65,7 @@ const NavHeader = (props) => {
 					onClick={handleNavItemClick}
 				>
 					{navItem.title}
-				</Link>
+				</LinkComponent>
 			</li>
 		)
 	});
@@ -85,7 +88,7 @@ const NavHeader = (props) => {
 			<BootstrapNavbar.Collapse in={isNavbarOpen}>
 				<ul className="navbar-nav">
 					<li className="nav-item">
-						<Link
+						<LinkComponent
 							id={`len${naveHomeItem.id}`}
 							className={classNames(styles.navlink, isScrolled && styles.scrolled, { bounce: bounceAnimation }, "nav-link")}
 							rel="noreferrer"
@@ -96,7 +99,7 @@ const NavHeader = (props) => {
 							onClick={handleNavItemClick}
 						>
 							<img className={styles.logo} src={logo} alt="HOME" />
-						</Link>
+						</LinkComponent>
 					</li>
 
 					{navArray}

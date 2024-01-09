@@ -1,4 +1,4 @@
-import NavHeader from '../../components/Header/Navbar/Navbar';
+import Navbar from '../../components/Header/Navbar/Navbar';
 import Hero from './Hero/Hero';
 import About from './About/About';
 import Projects from './Projects/Projects';
@@ -34,7 +34,12 @@ function Main() {
   ]
   return (
     <div>
-      <NavHeader naveHomeItem={naveHomeItem} navItems={navItems}></NavHeader>
+      <Navbar
+        naveHomeItem={naveHomeItem}
+        navItems={navItems}
+        type="scroll"
+      >
+      </Navbar>
       <Hero></Hero>
       <About></About>
       <Projects></Projects>
