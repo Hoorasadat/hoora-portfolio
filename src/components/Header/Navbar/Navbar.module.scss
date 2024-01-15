@@ -23,7 +23,7 @@
     color: variables.$light-purple !important;
     margin: 1rem;
     cursor: pointer;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
     transition-property:transform;
 
     @include mixins.respond(tab-med) {
@@ -44,7 +44,6 @@
     opacity:0;
     background: -webkit-radial-gradient(center, ellipse, rgba(177, 153, 182, 1) 0%, rgba(177, 153, 182, 0) 80%);
     background: radial-gradient(ellipse at center, rgba(177, 153, 182, 1) 0%, rgba(177, 153, 182, 0) 80%);
-    /* W3C */
     transition-duration: 0.3s;
     transition-property: transform, opacity;
 
@@ -72,13 +71,13 @@
     background: radial-gradient(ellipse at center, rgba(113, 17, 155, 1) 0%, rgba(113, 17, 155, 0) 80%);
 }
 
-.navlink:hover, .navlink:active, .navlink:focus{
+.navlink:hover, .navlink:active, .navlink.active{
     transform: translateY(-5px);
 }
 
-.navlink:hover:before, .navlink:active:before, .navlink:focus:before{
+.navlink:hover:before, .navlink:active:before, .navlink.active:before{
     opacity: 1;
-    // transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .bounce {

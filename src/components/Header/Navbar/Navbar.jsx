@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import logo from '../../../assets/logo.png';
 import styles from './Navbar.module.scss';
 
-const NavHeader = (props) => {
+const Navbar = (props) => {
 	const {naveHomeItem, navItems, type} = props;
 
 	const LinkComponent = type==="scroll" ? ScrollLink : RoutLink;
@@ -14,6 +14,7 @@ const NavHeader = (props) => {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [bounceAnimation, setBounceAnimation] = useState(false);
 	const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+	const [activeItemId, setActiveItemId] = useState(1);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -45,24 +46,32 @@ const NavHeader = (props) => {
 		setIsNavbarOpen(!isNavbarOpen);
 	};
 
-	const handleNavItemClick = () => {
+	const handleNavItemClick = (id) => {
 		// Close the navbar when a nav item is clicked
 		setIsNavbarOpen(false);
+		setActiveItemId(id);
 	  };
 
+	// An array of items in navbar excluding the first item that is the app logo
 	const navArray = navItems.map(navItem => {
 		return(
 			<li className="nav-item">
 				<LinkComponent
 					key={navItem.id}
 					id={`len${navItem.id}`}
-					className={classNames(styles.navlink, styles.navText, isScrolled && styles.scrolled, "nav-link")}
+					className={classNames(
+						styles.navlink,
+						styles.navText,
+						isScrolled && styles.scrolled,
+						activeItemId === navItem.id && styles.active,
+						"nav-link"
+					)}
 					rel="noreferrer"
 					to={navItem.to}
 					smooth={true}
 					duration={500}
 					offset={-50}
-					onClick={handleNavItemClick}
+					onClick={() => handleNavItemClick(navItem.id)}
 				>
 					{navItem.title}
 				</LinkComponent>
@@ -89,14 +98,21 @@ const NavHeader = (props) => {
 				<ul className="navbar-nav">
 					<li className="nav-item">
 						<LinkComponent
+							key={naveHomeItem.id}
 							id={`len${naveHomeItem.id}`}
-							className={classNames(styles.navlink, isScrolled && styles.scrolled, { bounce: bounceAnimation }, "nav-link")}
+							className={classNames(
+								styles.navlink,
+								isScrolled && styles.scrolled,
+								{ bounce: bounceAnimation },
+								activeItemId === naveHomeItem.id && styles.active,
+								"nav-link"
+							)}
 							rel="noreferrer"
 							to={naveHomeItem.to}
 							smooth={true}
 							duration={500}
 							offset={-100}
-							onClick={handleNavItemClick}
+							onClick={() => handleNavItemClick(naveHomeItem.id)}
 						>
 							<img className={styles.logo} src={logo} alt="HOME" />
 						</LinkComponent>
@@ -109,4 +125,4 @@ const NavHeader = (props) => {
   );
 };
 
-export default NavHeader;
+export default Navbar;
