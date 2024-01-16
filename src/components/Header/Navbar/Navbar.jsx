@@ -63,7 +63,7 @@ const Navbar = (props) => {
 						styles.navlink,
 						styles.navText,
 						isScrolled && styles.scrolled,
-						activeItemId === navItem.id && styles.active,
+						activeItemId === navItem.id && type==="scroll" && styles.active,
 						"nav-link"
 					)}
 					rel="noreferrer"
@@ -104,7 +104,7 @@ const Navbar = (props) => {
 								styles.navlink,
 								isScrolled && styles.scrolled,
 								{ bounce: bounceAnimation },
-								activeItemId === naveHomeItem.id && styles.active,
+								activeItemId === naveHomeItem.id && type==="scroll" && styles.active,
 								"nav-link"
 							)}
 							rel="noreferrer"
