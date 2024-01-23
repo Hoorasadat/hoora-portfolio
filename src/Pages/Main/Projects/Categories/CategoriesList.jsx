@@ -2,11 +2,11 @@ import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
-import styles from './CardList.module.scss';
+import styles from './CategoriesList.module.scss';
 
 
 
-const CardList = (props) => {
+const CategoriesList = (props) => {
     const { categories } = props;
     const cardsArray = categories.map(category => {
         const photo = require (`${category.image}`);
@@ -35,4 +35,4 @@ const CardList = (props) => {
     )
 };
 
-export default CardList;
+export default CategoriesList;

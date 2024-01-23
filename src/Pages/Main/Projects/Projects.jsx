@@ -1,26 +1,29 @@
 import React from 'react';
-import CardList from './CardList';
+import CategoriesList from './Categories/CategoriesList';
 import classNames from 'classnames';
 import styles from './Projects.module.scss';
+import dotnetImage from './images/dotnet.jpeg';
+import reactImage from './images/react.png';
+import htmlImage from './images/htmlCssJs.png';
 
 function App() {
     const categories = [
         {
             id: 1,
             title: "C# - .Net",
-            image: "./images/dotnet.jpeg",
+            image: dotnetImage,
             linkTo: "csharp-dotnet"
         },
         {
             id: 2,
             title: "React/ Node",
-            image: "./images/react.png",
+            image: reactImage,
             linkTo: "react-node"
         },
         {
             id: 3,
             title: "HTML - CSS - JS",
-            image: "./images/htmlCssJs.png",
+            image: htmlImage,
             linkTo: "html-css-js"
         }
     ];
@@ -30,7 +33,7 @@ function App() {
             <div className="container">
                 <div className={styles.projectWrapper}>
                     <h1 className="sectionTitle">Projects</h1>
-                    <CardList categories={categories}/>
+                    <CategoriesList categories={categories}/>
                 </div>
             </div>
         </section>

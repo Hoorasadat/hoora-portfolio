@@ -17,7 +17,7 @@ const Hero = () => {
 				</p>
 
 				<p className={classNames(styles.heroCta, styles.loadHidden)}>
-					<Link rel="noreferrer" to="about" className="ctaBtn ctaBtnHero" smooth={true} duration={500}>
+					<Link rel="noreferrer" to="about" className="ctaBtn ctaBtnHero" smooth={true} duration={500} offset={-70}>
 						More about me!
 					</Link>
 				</p>
