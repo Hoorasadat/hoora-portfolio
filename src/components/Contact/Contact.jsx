@@ -10,7 +10,7 @@ const Contact = () => {
 				<h2 className="sectionTitle">Contact me!</h2>
 				<div className={styles.loadHidden}>
 					<a rel="noreferrer" target="_blank" className="ctaBtn ctaBtnOthers"
-						href = "mailto: mirsaanei@gmail.com"
+						href="mailto: mirsaanei@gmail.com"
 					>
 						Email me!
 					</a>
@@ -20,6 +20,13 @@ const Contact = () => {
 						href="tel:(403)466-2011"
 					>
 						Call me!
+					</a>
+					<br/>
+					<br/>
+					<a rel="noreferrer" target="_blank" className="ctaBtn ctaBtnOthers"
+						href="https://www.linkedin.com/in/hoora-mirsanei/"
+					>
+						connect with me!
 					</a>
 				</div>
 			</div>

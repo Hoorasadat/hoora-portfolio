@@ -49,7 +49,7 @@ const About = () => {
 								Join me on this journey of continuous learning and innovation!
 							</p>
 						</div>
-						<div  id="resume" className="row d-flex flex-row justify-content-center">
+						<div className="row d-flex flex-row justify-content-center">
 								<a
 									rel="noreferrer"
 									target="_blank"

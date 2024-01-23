@@ -7,7 +7,8 @@ function Main() {
   const naveHomeItem =
   {
     id: 1,
-    to: "home"
+    to: "home",
+    title: "HOME"
   };
 
   const navItems = [
@@ -18,16 +19,11 @@ function Main() {
     },
     {
       id: 3,
-      to: "resume",
-      title: "RESUME"
-    },
-    {
-      id: 4,
       to: "projects",
       title: "PORTFOLIO"
     },
     {
-      id: 5,
+      id: 4,
       to: "contact",
       title: "CONTACT"
     },

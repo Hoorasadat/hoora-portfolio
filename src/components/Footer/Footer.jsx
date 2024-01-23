@@ -13,18 +13,16 @@ const Footer = () => {
 					to="home"
 					smooth={true}
 					duration={500}
-					offset={-100}
+					offset={-150}
 				>
 					<i className="fa fa-angle-double-up fa-3x" aria-hidden="true"></i>
 				</Link>
-				<div className={styles.socialLinks}>
-				</div>
 
 				<hr />
 
 				<p className={styles.footer__text}>
 					Copyright © 2023 All rights reserved
-					<a rel="noreferrer" href="#" target="_blank">
+					<a rel="noreferrer" href="https://www.linkedin.com/in/hoora-mirsanei/" target="_blank">
 						&nbsp;Hoora Mirsanei
 					</a>
 				</p>

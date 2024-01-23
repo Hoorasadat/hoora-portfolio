@@ -71,11 +71,11 @@
     background: radial-gradient(ellipse at center, rgba(113, 17, 155, 1) 0%, rgba(113, 17, 155, 0) 80%);
 }
 
-.navlink:hover, .navlink:active, .navlink.active{
-    transform: translateY(-5px);
+.navlink:hover{
+    opacity: 0.5;
 }
 
-.navlink:hover:before, .navlink:active:before, .navlink.active:before{
+.navlink.active, .navlink.active:before{
     opacity: 1;
     transform: translateY(-5px);
 }

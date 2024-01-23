@@ -2,7 +2,6 @@
 @use '../../common/styles/mixins';
 
 .footer {
-  background-color: variables.$light-purple;
   color: variables.$white-color;
   padding: 1rem 0;
 
@@ -11,15 +10,14 @@
   }
 
   &__text {
-    color: darken(variables.$white-color, 100%);
     font-size: variables.$xSmall-font-size;
 
     a {
-      color: darken(variables.$white-color, 100%);
+      color: variables.$light-purple;
       font-size: variables.$xSmall-font-size;
+      font-weight: bold;
       transition: all 0.4s;
       display: inline-block;
-      background-color: variables.$light-purple;
 
       &:hover,
       &:active {

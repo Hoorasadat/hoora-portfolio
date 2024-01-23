@@ -8,6 +8,7 @@ import styles from './Navbar.module.scss';
 
 const Navbar = (props) => {
 	const {naveHomeItem, navItems, type} = props;
+	const allNavItems = [naveHomeItem, ...navItems];
 
 	const LinkComponent = type==="scroll" ? ScrollLink : RoutLink;
 
@@ -19,6 +20,18 @@ const Navbar = (props) => {
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollPosition = window.scrollY;
+
+			// Determine which section is currently in view based on scroll position
+			const activeSection = allNavItems.find((navItem) => {
+				const section = document.getElementById(navItem.to);
+				const rect = section.getBoundingClientRect();
+				return rect.top <= 150 && rect.bottom >= 500;
+			});
+
+			if (activeSection) {
+				setActiveItemId(activeSection.id);
+			}
+
 			setIsScrolled(scrollPosition > 120);
 		};
 
@@ -49,7 +62,6 @@ const Navbar = (props) => {
 	const handleNavItemClick = (id) => {
 		// Close the navbar when a nav item is clicked
 		setIsNavbarOpen(false);
-		setActiveItemId(id);
 	  };
 
 	// An array of items in navbar excluding the first item that is the app logo
@@ -70,7 +82,8 @@ const Navbar = (props) => {
 					to={navItem.to}
 					smooth={true}
 					duration={500}
-					offset={-50}
+					// have a different offset for ABOUT section
+					offset={navItem.id === 2 ? -90 : 0}
 					onClick={() => handleNavItemClick(navItem.id)}
 				>
 					{navItem.title}
