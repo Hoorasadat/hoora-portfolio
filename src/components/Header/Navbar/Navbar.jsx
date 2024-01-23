@@ -24,8 +24,11 @@ const Navbar = (props) => {
 			// Determine which section is currently in view based on scroll position
 			const activeSection = allNavItems.find((navItem) => {
 				const section = document.getElementById(navItem.to);
-				const rect = section.getBoundingClientRect();
-				return rect.top <= 150 && rect.bottom >= 500;
+				if (section) {
+				  	const rect = section.getBoundingClientRect();
+				  	return rect.top <= 150 && rect.bottom >= 500;
+				}
+				return false;
 			});
 
 			if (activeSection) {
