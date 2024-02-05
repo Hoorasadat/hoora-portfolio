@@ -70,9 +70,8 @@ const Navbar = (props) => {
 	// An array of items in navbar excluding the first item that is the app logo
 	const navArray = navItems.map(navItem => {
 		return(
-			<li className="nav-item">
+			<li key={navItem.id} className="nav-item">
 				<LinkComponent
-					key={navItem.id}
 					id={`len${navItem.id}`}
 					className={classNames(
 						styles.navlink,
