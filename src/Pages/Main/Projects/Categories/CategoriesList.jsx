@@ -9,7 +9,7 @@ import styles from './CategoriesList.module.scss';
 const CategoriesList = (props) => {
     const { categories } = props;
     const cardsArray = categories.map(category => {
-        const photo = require (`${category.image}`);
+        const photo = category.image;
         return (
             <Card
                 key={category.id}
