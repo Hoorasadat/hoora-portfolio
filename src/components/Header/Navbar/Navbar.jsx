@@ -35,7 +35,7 @@ const Navbar = (props) => {
 				setActiveItemId(activeSection.id);
 			}
 
-			setIsScrolled(scrollPosition > 120);
+			setIsScrolled(scrollPosition > 90);
 		};
 
 		// Add scroll event listener

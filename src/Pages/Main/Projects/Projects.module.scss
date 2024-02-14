@@ -2,7 +2,7 @@
 @use '../../../common/styles/mixins' as mixins;
 
 .projects {
-  color: variables.$dark-purple-text;
+  color: variables.$dark-purple-color;
   margin-top: -18rem;
   padding-top: 18rem;
 
@@ -13,6 +13,7 @@
 }
 
 .projectWrapper {
+  color: variables.$dark-purple-color;
   margin-bottom: 15rem;
 
   @include mixins.respond(phone) {
