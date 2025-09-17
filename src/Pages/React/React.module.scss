@@ -1,0 +1,13 @@
+@use '../../common/styles/variables';
+@use '../../common/styles/mixins' as mixins;
+
+.projects {
+  color: variables.$dark-purple-color;
+  font-size: variables.$xBig-font-size;
+  margin-top: 12rem;
+	margin-bottom: 20rem;
+
+  @include mixins.respond(tab-land) {
+    // margin-top: 0;
+  }
+}

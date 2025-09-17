@@ -1,0 +1,187 @@
+@use '../../common/styles/variables';
+@use '../../common/styles/mixins' as mixins;
+
+.card {
+	width: 70%;
+	color: variables.$secondary-color;
+	background-image: linear-gradient(
+		135deg,
+		variables.$primary-color 0%,
+		variables.$secondary-color 100%
+	);
+
+	// @include mixins.respond(tab-land) {
+//     width: 70rem;
+	// }
+
+	// @include mixins.respond(tab-port) {
+//     width: 50rem;
+	// }
+
+	// @include mixins.respond(phone) {
+//     	width: 35rem;
+	// }
+
+	// @include mixins.respond(phone-xs) {
+//     width: 25rem;
+	// }
+}
+
+.img {
+    width: 70%;
+
+    transition: transform 0.2s ease-in-out;
+
+    :hover {
+			transform: scale(1.05);
+    }
+
+    // @include mixins.respond(tab-land) {
+		// 	width: 60rem;
+    // }
+
+    // @include mixins.respond(tab-port) {
+		// 	width: 40rem;
+    // }
+
+    // @include mixins.respond(phone) {
+		// 	width: 30rem;
+    // }
+
+    // @include mixins.respond(phone-xs) {
+		// 	width: 20rem;
+    // }
+}
+
+.title {
+	font-size: variables.$large-font-size;
+	font-weight: bold;
+
+	// @include mixins.respond(tab-port) {
+	// 	font-size: variables.$med-font-size;
+	// }
+
+	// @include mixins.respond(phone) {
+	// 	font-size: variables.$small-font-size;
+	// }
+
+	// @include mixins.respond(phone-xs) {
+	// 	font-size: variables.$xSmall-font-size;
+	// }
+}
+
+.description {
+	color: variables.$white-color;
+	font-size: variables.$small-font-size;
+}
+
+.emptyBtn {
+	font-size: variables.$med-btn-font-size;
+}
+
+.btn {
+	font-size: variables.$med-btn-font-size;
+  // display: inline-block;
+  // position: relative;
+  // padding: 0.8rem variables.$small-btn-font-size;
+  // font-weight: bold;
+  // line-height: 1;
+  // z-index: 1;
+  // transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   width: 0px;
+  //   height: 100%;
+  //   left: 0;
+  //   bottom: 0;
+  //   z-index: -1;
+  //   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+  // }
+
+  // // @include supportColorForIE11();
+  border: 2px solid transparent;
+  border-image: linear-gradient(
+    135deg,
+    variables.$primary-color 0%,
+    variables.$secondary-color 100%
+  );
+  border-image-slice: 1;
+  // // @include supportIE11() {
+  // //   color: variables.$secondary-color !important;
+  // //   &:hover {
+  // //     color: variables.$white-color !important;
+  // //   }
+  // // }
+
+  // // @include respond(phone) {
+  // //   background-image: none;
+  // //   border: 2px solid variables.$secondary-color;
+  // //   -webkit-text-fill-color: variables.$secondary-color;
+  // // }
+
+  // &::after {
+  //   background-image: linear-gradient(
+  //     135deg,
+  //     variables.$primary-color 0%,
+  //     variables.$secondary-color 100%
+  //   );
+
+  //   // @include respond(phone) {
+  //   //   background-image: none;
+  //   // }
+  // }
+
+  // &:hover {
+  //   -webkit-text-fill-color: variables.$white-color;
+  //   text-decoration: none;
+
+  //   // @include respond(phone) {
+  //   //   -webkit-text-fill-color: variables.$secondary-color;
+  //   // }
+
+  //   &::after {
+  //     width: 100%;
+  //   }
+  // }
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0, 0.3);
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.triangle {
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-35%, -50%);
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 40px solid white;
+	border-radius: 5%;
+}
+
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
