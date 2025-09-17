@@ -1,4 +1,4 @@
-import Navbar from '../../components/Header/Navbar/Navbar';
+import Navbar from '../../components/Header/Navbar/Navbar.jsx';
 
 const HtmlCss = () => {
   const naveHomeItem =

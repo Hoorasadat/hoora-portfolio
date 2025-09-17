@@ -1,4 +1,4 @@
-import NavHeader from '../../components/Header/Navbar/Navbar';
+import NavHeader from '../../components/Header/Navbar/Navbar.jsx';
 
 const Dotnet = () => {
   const naveHomeItem =

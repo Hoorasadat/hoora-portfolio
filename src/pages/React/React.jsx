@@ -1,5 +1,5 @@
-import NavHeader from '../../components/Header/Navbar/Navbar';
-import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import NavHeader from '../../components/Header/Navbar/Navbar.jsx';
+import ProjectCard from '../../components/ProjectCard/ProjectCard.jsx';
 import classNames from 'classnames';
 import styles from './React.module.scss';
 import HooraPortfolio from "./media/HooraPortfolio.jpg";
@@ -29,7 +29,7 @@ const React = () => {
       title: "HTML-CSS-JS"
     }
   ];
-  
+
   return (
     <>
       <NavHeader naveHomeItem={naveHomeItem} navItems={navItems}>

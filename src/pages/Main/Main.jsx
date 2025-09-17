@@ -1,7 +1,7 @@
-import Navbar from '../../components/Header/Navbar/Navbar';
-import Hero from './Hero/Hero';
-import About from './About/About';
-import Projects from './Projects/Projects';
+import Navbar from '../../components/Header/Navbar/Navbar.jsx';
+import Hero from './Hero/Hero.jsx';
+import About from './About/About.jsx';
+import Projects from './Projects/Projects.jsx';
 
 function Main() {
   const naveHomeItem =

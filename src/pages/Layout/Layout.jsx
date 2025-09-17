@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
-import Contact from '../../components/Contact/Contact';
-import Footer from '../../components/Footer/Footer';
+import Contact from '../../components/Contact/Contact.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
 
 function Layout () {
     return (
