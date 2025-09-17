@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from './pages/Layout/Layout';
+import Layout from './pages/Layout/Layout.jsx';
 import Main from './pages/Main/Main';
 import Dotnet from './pages/Dotnet/Dotnet';
 import React from './pages/React/React';
